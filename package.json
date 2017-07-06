@@ -1,0 +1,28 @@
+{
+  "name": "ui-seed",
+  "version": "0.0.1",
+  "description": "seed project to understand npm bower gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Udit Khanna",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.0",
+    "gulp-inject": "^4.2.0",
+    "gulp-uglify": "^3.0.0",
+    "merge-stream": "^1.0.1"
+  },
+  "dependencies": {
+    "bower-files": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "main-bower-files": "^2.13.1"
+  }
+}

@@ -1,0 +1,21 @@
+<input type="text" class="form-control" placeholder="search here" ng-model="userListVm.searchText">
+<table class="table table-striped ">
+    <thead class="thead-inverse">
+    <tr>
+        <th>Photo</th>
+        <th ng-click="userListVm.sorter.sortBy= 'firstName'; userListVm.sorter.sortOrder = !userListVm.sorter.sortOrder;">Name</th>
+        <th ng-click="userListVm.sorter.sortBy= 'email'; userListVm.sorter.sortOrder = !userListVm.sorter.sortOrder;">Email</th>
+        <th ng-click="userListVm.sorter.sortBy= 'address.city'; userListVm.sorter.sortOrder = !userListVm.sorter.sortOrder;">City</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in userListVm.users | filter: userListVm.searchText | orderBy: userListVm.sorter.sortBy: userListVm.sorter.sortOrder ">
+        <td><a ng-href="#!/user-detail/{{user.id}}"><img class="photo" ng-src="{{user.profilePic}}"></a> </td>
+        <td>{{user.firstName}} {{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.city}}</td>
+        <td><i ng-click="userListVm.deleteUser(user.id)" class="glyphicon glyphicon-remove"></i></td>
+    </tr>
+    </tbody>
+</table>
