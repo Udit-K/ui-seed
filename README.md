@@ -1,4 +1,3 @@
-# ui-seed
-Bower, NPM, Gulp.js
+# Angular ui-seed
 
-node_modules and bower_components are intentionally uploaded
+This project uses NPM, Bower, Gulp.js
